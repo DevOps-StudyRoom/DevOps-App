@@ -20,6 +20,10 @@
             padding: 10px;
         }
 
+        .logging-table-box {
+            padding: 10px;
+        }
+
         #progress {
             transition: width 2s;
         }
@@ -37,15 +41,17 @@
                 </div>
             </div>
 
-            <table class="table">
-                <thead id="data-head">
-                <th>시간</th>
-                <th>컨테이너 이름</th>
-                <th>로그</th>
-                </thead>
-                <tbody id="data-cell">
-                </tbody>
-            </table>
+            <div class="logging-table-box">
+                <table class="table">
+                    <thead id="data-head">
+                    <th>시간</th>
+                    <th>컨테이너 이름</th>
+                    <th>로그</th>
+                    </thead>
+                    <tbody id="data-cell">
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </th:block>
@@ -75,12 +81,10 @@
                     $('#data-cell').html(html)
 
 
-                    console.log('2')
                     $('#progress').css('transition', 'width 2s');
                     $('#progress').css('width', '100%');
                 });
 
-            console.log('1')
             $('#progress').css('transition', 'width 0s');
             $('#progress').css('width', '0%');
         }
