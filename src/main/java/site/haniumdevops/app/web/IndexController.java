@@ -17,6 +17,11 @@ public class IndexController {
         return "logging";
     }
 
+    @GetMapping("/logging_new")
+    public String logging_new() {
+        return "logging_new";
+    }
+
     @GetMapping("/monitoring")
     public String monitoring() {
         return "monitoring";
